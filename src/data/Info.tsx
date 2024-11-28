@@ -2,10 +2,11 @@ export interface InfoType {
   Country: string;
   Year: string;
   "Crop Name": string;
-  "Crop Production (UOM:t(Tonnes))": number ;
-  "Yield Of Crops (UOM:Kg/Ha(KilogramperHectare))": number ;
-  "Area Under Cultivation (UOM:Ha(Hectares))": number | any;
+  "Crop Production (UOM:t(Tonnes))": any;  // Allow string or null for empty fields
+  "Yield Of Crops (UOM:Kg/Ha(KilogramperHectare))": any;  // Allow string or null for empty fields
+  "Area Under Cultivation (UOM:Ha(Hectares))": any;  // Allow string or null for empty fields
 }
+
 
 
 const Info:InfoType[]=[

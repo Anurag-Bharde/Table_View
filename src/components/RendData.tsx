@@ -10,7 +10,7 @@ interface RendDataProps{
 
 const RendData:React.FC<RendDataProps>= ({Count,Year,Crop,Produce,Yields,Area}) => {
   return (
-    <div>
+    <div style={{display:"flex"}}>
       <h6>{Count}</h6>
       <h6>{Year}</h6>
       <h6>{Crop}</h6>

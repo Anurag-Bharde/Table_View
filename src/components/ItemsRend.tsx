@@ -68,7 +68,46 @@ const Work: React.FC = () => {
 
   return (
     <div>
-    
+      {/* Buttons */}
+      <Group mb="md">
+        <Button onClick={() => setTableType("A")}>Show Max/Min Production</Button>
+        <Button onClick={() => setTableType("B")}>Show Average Table</Button>
+        <Button onClick={() => setTableType("RESET")}>Reset</Button>
+      </Group>
+
+      {/* Table */}
+      <Table withColumnBorders highlightOnHover striped>
+        <Table.Thead>
+          <Table.Tr>
+            {tableType === "A" && (
+              <>
+                <Table.Th>Year</Table.Th>
+                <Table.Th>Max Production Crop</Table.Th>
+                <Table.Th>Min Production Crop</Table.Th>
+              </>
+            )}
+            {tableType === "B" && (
+              <>
+                <Table.Th>Crop</Table.Th>
+                <Table.Th>Average Yield</Table.Th>
+                <Table.Th>Average Cultivation Area</Table.Th>
+              </>
+            )}
+            {tableType === "RESET" && (
+              <>
+                <Table.Th>Index</Table.Th>
+                <Table.Th>Country</Table.Th>
+                <Table.Th>Year</Table.Th>
+                <Table.Th>Crop Name</Table.Th>
+                <Table.Th>Crop Production</Table.Th>
+                <Table.Th>Yield Of Crops</Table.Th>
+                <Table.Th>Area Under Cultivation</Table.Th>
+              </>
+            )}
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>{renderTableRows()}</Table.Tbody>
+      </Table>
     </div>
   );
 };

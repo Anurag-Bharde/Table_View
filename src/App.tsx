@@ -2,12 +2,14 @@ import { useState } from 'react'
 import Info from './data/Info'
 // import './App.css'
 import Work from './components/ItemsRend'
+import { MantineProvider } from '@mantine/core';
+
 
 function App() {
 
   return (
     <>
-    <Work />
+    <MantineProvider><Work /></MantineProvider>
     
     </>
   )

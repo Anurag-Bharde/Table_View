@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import Info from './data/Info'
+
 // import './App.css'
 import Work from './components/ItemsRend'
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, createTheme } from '@mantine/core';
 
 
 function App() {
 
   return (
     <>
-    <MantineProvider><Work /></MantineProvider>
+    <MantineProvider ><Work /></MantineProvider>
     
     </>
   )

@@ -13,9 +13,9 @@ const Work: React.FC=()=>{
             Count={info.Country}
             Year={info.Year}
             Crop={info["Crop Name"] || "0"}
-            Produce={info["Crop Production (UOM:t(Tonnes))"] ?? 0}
-            Yields={info["Yield Of Crops (UOM:Kg/Ha(KilogramperHectare))"] ?? 0}
-            Area={info["Area Under Cultivation (UOM:Ha(Hectares))"] ?? 0}
+            Produce={info["Crop Production (UOM:t(Tonnes))"] || 0}
+            Yields={info["Yield Of Crops (UOM:Kg/Ha(KilogramperHectare))"] || 0}
+            Area={info["Area Under Cultivation (UOM:Ha(Hectares))"] || 0}
 
             />
 

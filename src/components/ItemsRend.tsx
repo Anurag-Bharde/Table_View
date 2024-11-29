@@ -50,7 +50,21 @@ const Work: React.FC = () => {
   };
 
   // Render table rows based on selected type
- 
+  const renderTableRows = () => {
+    if (tableType === "A") return getMaxMinProductionTable();
+    if (tableType === "B") return getAverageTable();
+    return Info.map((info, index) => (
+      <Table.Tr key={index}>
+        <Table.Td>{index + 1}</Table.Td>
+        <Table.Td>{info.Country}</Table.Td>
+        <Table.Td>{info.Year}</Table.Td>
+        <Table.Td>{info["Crop Name"]}</Table.Td>
+        <Table.Td>{info["Crop Production (UOM:t(Tonnes))"] || 0}</Table.Td>
+        <Table.Td>{info["Yield Of Crops (UOM:Kg/Ha(KilogramperHectare))"] || 0}</Table.Td>
+        <Table.Td>{info["Area Under Cultivation (UOM:Ha(Hectares))"] || 0}</Table.Td>
+      </Table.Tr>
+    ));
+  };
 
   return (
     <div>

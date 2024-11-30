@@ -24,7 +24,7 @@ A React project to aggregate and display crop data in tabular form with multiple
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/<username>/<repo-name>.git
+   git clone https://github.com/Anurag-Bharde/Table_View.git
    cd <repo-name>
    ```
 

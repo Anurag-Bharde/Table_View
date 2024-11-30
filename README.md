@@ -5,33 +5,6 @@ A React project to aggregate and display crop data in tabular form with multiple
 
 ---
 
-## 🛠 Features
-
-- **View Original Data**: Displays all crop data.
-- **Maximum/Minimum Production Table**: Aggregates crops with maximum and minimum production by year.
-- **Average Table**: Aggregates average yield and cultivation area for each crop between 1950–2020.
-- **Responsive Design**: Utilizes [Mantine UI](https://mantine.dev/) for styling.
-- **Dynamic Table Switching**: Toggle between different table views using buttons.
-
----
-
-## 🚀 How It Works
-
-### Data Aggregation
-1. **Maximum/Minimum Production**:
-   - Groups data by year.
-   - Identifies the crop with the maximum and minimum production for each year.
-   
-2. **Average Yield & Area**:
-   - Groups data by crop name.
-   - Calculates the average yield and cultivation area for each crop over the years.
-
-### Components
-- **Buttons**: To switch between table views (`A`, `B`, or `Reset`).
-- **Table**: Dynamically displays the appropriate data based on the selected view.
-
----
-
 ## 🛠 How I Did It
 
 1. **Created React Components**:
@@ -44,10 +17,6 @@ A React project to aggregate and display crop data in tabular form with multiple
 
 3. **Data Manipulation**:
    - Used `Array.reduce()` to process and aggregate crop data.
-
-4. **Hosted on GitHub Pages**:
-   - Used the `gh-pages` package for deployment.
-   - Followed the steps to push the project to GitHub and enable live preview.
 
 ---
 
@@ -75,3 +44,34 @@ A React project to aggregate and display crop data in tabular form with multiple
 ![Alt text](/Images/2.png?raw=true "Table Image")
 ![Alt text](/Images/2.png?raw=true "Min/Max Production Image")
 ![Alt text](/Images/2.png?raw=true "Average Yield Image")
+
+---
+
+## 🚀 How It Works
+
+### Data Aggregation
+1. **Maximum/Minimum Production**:
+   - Groups data by year.
+   - Identifies the crop with the maximum and minimum production for each year.
+   
+2. **Average Yield & Area**:
+   - Groups data by crop name.
+   - Calculates the average yield and cultivation area for each crop over the years.
+
+### Components
+- **Buttons**: To switch between table views (`A`, `B`, or `Reset`).
+- **Table**: Dynamically displays the appropriate data based on the selected view.
+
+---
+
+
+
+## 🛠 Features
+
+- **View Original Data**: Displays all crop data.
+- **Maximum/Minimum Production Table**: Aggregates crops with maximum and minimum production by year.
+- **Average Table**: Aggregates average yield and cultivation area for each crop between 1950–2020.
+- **Responsive Design**: Utilizes [Mantine UI](https://mantine.dev/) for styling.
+- **Dynamic Table Switching**: Toggle between different table views using buttons.
+
+---

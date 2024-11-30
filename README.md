@@ -1,50 +1,77 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Crop Data Aggregation
 
-Currently, two official plugins are available:
+A React project to aggregate and display crop data in tabular form with multiple views.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **View Original Data**: Displays all crop data.
+- **Maximum/Minimum Production Table**: Aggregates crops with maximum and minimum production by year.
+- **Average Table**: Aggregates average yield and cultivation area for each crop between 1950–2020.
+- **Responsive Design**: Utilizes [Mantine UI](https://mantine.dev/) for styling.
+- **Dynamic Table Switching**: Toggle between different table views using buttons.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🚀 How It Works
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Data Aggregation
+1. **Maximum/Minimum Production**:
+   - Groups data by year.
+   - Identifies the crop with the maximum and minimum production for each year.
+   
+2. **Average Yield & Area**:
+   - Groups data by crop name.
+   - Calculates the average yield and cultivation area for each crop over the years.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Components
+- **Buttons**: To switch between table views (`A`, `B`, or `Reset`).
+- **Table**: Dynamically displays the appropriate data based on the selected view.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## 🛠 How I Did It
+
+1. **Created React Components**:
+   - Used `useState` for managing table view state.
+   - Added reusable functions to aggregate and transform data.
+   
+2. **Used Mantine Library**:
+   - Styled buttons and tables.
+   - Ensured responsiveness.
+
+3. **Data Manipulation**:
+   - Used `Array.reduce()` to process and aggregate crop data.
+
+4. **Hosted on GitHub Pages**:
+   - Used the `gh-pages` package for deployment.
+   - Followed the steps to push the project to GitHub and enable live preview.
+
+---
+
+## 📦 Installation & Setup
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/<username>/<repo-name>.git
+   cd <repo-name>
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   yarn install
+   ```
+
+3. **Run the Project Locally**:
+   ```bash
+   yarn run dev
+   ```
+
+
+## Screen-shots
+
+![Alt text](/Images/2.png?raw=true "Table Image")
+![Alt text](/Images/2.png?raw=true "Min/Max Production Image")
+![Alt text](/Images/2.png?raw=true "Average Yield Image")

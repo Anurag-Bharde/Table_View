@@ -1,7 +1,7 @@
 
 // import './App.css'
 import Work from './components/ItemsRend'
-import { MantineProvider, createTheme } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
 
 
 function App() {
